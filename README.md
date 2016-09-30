@@ -8,7 +8,7 @@
 
 ## 2015
 
-* **Posytron Engineering**, Reggio Calabria, Internal Meeting, Introduction to Git: [part 1](http://www.slideshare.net/parallelit/introduction-to-git-54336323), [part 2](http://www.slideshare.net/parallelit/introduction-to-git-part-2), [part 3](http://www.slideshare.net/parallelit/introduction-to-git-part-3)
+* **Posytron Engineering**, Reggio Calabria, Internal Meeting, Introduction to Git [part 1](http://www.slideshare.net/parallelit/introduction-to-git-54336323), [part 2](http://www.slideshare.net/parallelit/introduction-to-git-part-2), [part 3](http://www.slideshare.net/parallelit/introduction-to-git-part-3)
 * **Università per Stranieri "Dante Alighieri"**, Reggio Calabria, Master Universitario di II Livello in Sviluppo di Applicazioni Web, Mobile e Social Media, [Versioning, Configuration & Document Management](http://www.slideshare.net/parallelit/corso-di-version-configuration-document-management)
 * **Università per Stranieri "Dante Alighieri"**, Reggio Calabria, Master Universitario di II Livello in Sviluppo di Applicazioni Web, Mobile e Social Media, [HTML5 e CSS](http://www.slideshare.net/parallelit/ma-sem-html5ecssreduced)
 * **Università per Stranieri "Dante Alighieri"**, Reggio Calabria, Master Universitario di II Livello in Sviluppo di Applicazioni Web, Mobile e Social Media, [Concetti base di programmazione](http://www.slideshare.net/parallelit/corso-di-concetti-base-di-programmazione)
