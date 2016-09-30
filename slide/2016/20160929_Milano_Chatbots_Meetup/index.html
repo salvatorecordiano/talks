@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<title>Creare un bot Telegram passo passo</title>
+		<meta name="author" content="Salvatore Cordiano">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white-parallel.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/font-awesome.min.css">
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			
+			<div class="slides">
+				
+				<section>
+					<p class="meetup"><img src="asset/logo_meetup.png" width="80" style="vertical-align:bottom;"> Milano Chatbots Meetup</p>
+					<h1 class="title">Creare un Bot Telegram passo passo</h1>
+					<p><small>Salvatore Cordiano<br/><a class="twitter" href="https://twitter.com/parallelit"><i class="fa fa-twitter" aria-hidden="true" style="vertical-align:middle;"></i> parallelit</a></small></p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2 class="title">Chi sono</h2>
+
+					<div style="float:left;">
+						<img src="asset/photo.png" width="240">
+					</div>
+					<div style="float:left;">
+						<p>
+							<strong>Salvatore Cordiano</strong><br/>
+							Full stack Web Developer
+						</p>
+						<ul>
+							<li><a href="http://sal.cr"><i class="fa fa-link" aria-hidden="true"></i> http://sal.cr</a></li>
+							<li><a class="twitter" href="https://twitter.com/parallelit"><i class="fa fa-twitter" aria-hidden="true"></i> parallelit</a></li>
+						</ul>
+					</div>
+					<div style="clear:both;"> </div>
+				</section>
+
+				<section style="text-align: left;">
+					<h2 class="title">Agenda</h2>
+					<ul>
+						<li>Prerequisiti</li>
+						<li>Che cos'è un bot?</li>
+						<li>Echo Bot</li>
+						<li>Scenario</li>
+						<li>Tutorial</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2 class="title">Prerequisiti</h2>
+					<ul>
+						<li>Account Telegram</li>
+						<li>Account Heroku</li>
+						<li>Account Dropobox</li>
+						<li>Familiarit&agrave; con PHP e REST API</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">Che cos'&egrave; un bot?</h2>
+						<p class="fragment">&laquo;Con il termine <strong>bot</strong>, abbreviazione di <em>robot</em>, definiamo un programma che opera come agente per un utente o un altro programma e simula un'attivit&agrave; umana&raquo;</p>
+					</section>
+					<section>
+						<h2 class="title">Che cos'&egrave; un chatterbot?</h2>
+						<p class="fragment">&laquo;Un <strong>chatterbot</strong> è un programma che tenta di simulare la conversazione di un essere umano&raquo;</p>
+					</section>
+				</section>
+
+				<section>
+					<h2 class="title">Echo Bot</h2>
+					<p class="fragment">&Egrave; un bot Telegram che ripete ci&ograve; che gli scriviamo</p>
+				</section>
+
+				<section>
+					<h2 class="title">@milanochatbot</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="title">Scenario</h2>
+						<p><img src="asset/scenario.png"></p>
+					</section>
+					<section>
+						<h2 class="title">Che cos'&egrave; un WebHook?</h2>
+						<p class="fragment">&laquo;Un WebHook &egrave; una <strong>callback HTTP</strong> definita dall'utente. Di solito &egrave; scatenata da un evento (es. la ricezione di un messaggio). Quando l'evento accade, la fonte fa una richiesta HTTP alla URI configurata per il webhook&raquo;</p>
+					</section>
+				</section>
+
+				<section>
+					<h2 class="title">Tutorial</h2>
+					<ol>
+						<li class="fragment">Creazione del bot</li>
+						<li class="fragment">Configurazione del bot</li>
+						<li class="fragment">Deployment del bot</li>
+						<li class="fragment">Attivazione del WebHook</li>
+						<li class="fragment">Test drive</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2 class="title">Per approfondire...</h2>
+					<ol>
+						<li><a class="black" href="http://www.salvatorecordiano.it/creare-un-bot-telegram-guida-passo-passo/">Tutorial testuale <i class="fa fa-link" aria-hidden="true"></i></a></li>
+						<li><a class="black" href="https://github.com/salvatorecordiano/telegram-echo-bot">Codice esempio <i class="fa fa-link" aria-hidden="true"></i></a></li>
+						<li><a class="black" href="https://core.telegram.org/bots">Bots: An introduction for developers <i class="fa fa-link" aria-hidden="true"></i></a></li>
+					</ol>
+				</section>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="lib/js/head.min.js"></script>
+		<script type="text/javascript" src="js/reveal.js"></script>
+		<script type="text/javascript">
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+                slideNumber: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
+				]
+			});
+		</script>
+
+	</body>
+</html>
