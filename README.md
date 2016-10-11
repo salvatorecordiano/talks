@@ -2,7 +2,7 @@
 
 ## 2016
 
-* **WordPress Meetup Milano**, MotorK Italia, Milano, [Integrare WordPress e Telegram senza scrivere una riga di codice](https://salvatorecordiano.github.io/talks/slide/2016/20161011_WordPress_Meetup_Milano)
+* **WordPress Meetup Milano**, MotorK Italia, Milano, [Integrare WordPress e Telegram senza scrivere una riga di codice](https://github.com/salvatorecordiano/talks/tree/master/slide/2016/20161011_WordPress_Meetup_Milano)
 * **Milano Chatbots Meetup**, Venini 42, Milano, [Creare un bot Telegram passo passo](https://github.com/salvatorecordiano/talks/tree/master/slide/2016/20160929_Milano_Chatbots_Meetup)
 * **Posytron Engineering**, Reggio Calabria, Internal Meeting, [Road to Microservices](http://www.slideshare.net/parallelit/road-to-microservices)
 * **Posytron Engineering**, Reggio Calabria, Internal Meeting, [About Microservices](http://www.slideshare.net/parallelit/about-microservices)
