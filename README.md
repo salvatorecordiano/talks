@@ -20,4 +20,8 @@
 
 ## 2013
 
+* **Università per Stranieri "Dante Alighieri"**, Reggio Calabria, Master Universitario di II Livello in Sviluppo di Applicazioni Web, Mobile e Social Media, [Introduzione ai Social Media](http://www.slideshare.net/parallelit/introduzione-ai-social-media-67545124)
+
+## 2009
+
 * **Anisap Calabria**, Palmi (RC), [La posta elettronica certificata](http://www.slideshare.net/parallelit/la-posta-elettronica-certificata-pec)
