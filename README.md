@@ -1,5 +1,10 @@
 # Talks & courses
 
+
+## 2017
+
+* **WordPress Meetup Milano**, MotorK Italia, Milano, [Docker e WordPress:un matrimonio che s'ha da fare](https://github.com/salvatorecordiano/talks/tree/master/slide/2017/20170221_WordPress_Meetup_Milano)
+
 ## 2016
 
 * **WordPress Meetup Milano**, MotorK Italia, Milano, [Integrare WordPress e Telegram senza scrivere una riga di codice](https://github.com/salvatorecordiano/talks/tree/master/slide/2016/20161011_WordPress_Meetup_Milano)
