@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<title>Docker e WordPress: un matrimonio che s'ha da fare</title>
+	<meta name="author" content="Salvatore Cordiano">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white-parallel.css" id="theme">
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="lib/css/font-awesome.min.css">
+	<script type="text/javascript">
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+	<body>
+		<div id="particles-js" class="reveal">
+			<div class="slides">
+
+
+				<section>
+					<p class="meetup">
+						<i class="fa fa-wordpress" aria-hidden="true"></i> WordPress Meetup Milano
+					</p>
+					<p class="meetup">
+						<small>Hosted by MotorK Italia Srl</small>
+					</p>
+					<h2 class="title">Docker e WordPress:<br/>un matrimonio che s'ha da fare</h2>
+					<p><small>Salvatore Cordiano<br/><a class="twitter" href="https://twitter.com/parallelit"><i class="fa fa-twitter" aria-hidden="true" style="vertical-align:middle;"></i> parallelit</a></small></p>
+				</section>
+
+				<section style="text-align: left;">
+					<h2 class="title">¡Hola!</h2>
+					<div style="float:left;">
+						<img src="asset/photo.png" width="240">
+					</div>
+					<div style="float:left;">
+						<p>
+							<strong>Salvatore Cordiano</strong><br/>
+							Full stack Web Developer
+						</p>
+						<ul class="no-bullet">
+							<li><a href="http://sal.cr"><i class="fa fa-link" aria-hidden="true"></i> <span class="link-equal-width">Blog </span>http://sal.cr</a></li>
+							<li><a class="twitter" href="https://twitter.com/parallelit"><i class="fa fa-twitter" aria-hidden="true"></i> <span class="link-equal-width">Twitter </span>@parallelit</a></li>
+						</ul>
+					</div>
+					<div style="clear:both;"> </div>
+				</section>
+
+				<section>
+					<h2 class="title">Agenda</h2>
+					<ul>
+						<li>Introduzione a Docker</li>
+						<li>Primi passi con Docker</li>
+						<li>docker-compose</li>
+						<li>Demo</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2 class="title">Introduzione a</h2>
+					<p><img src="asset/docker_logo.png"></p>
+				</section>
+
+				<section>
+					<p><img src="asset/container.png"></p>
+					<p><strong>Docker</strong> è un progetto open-source che ha lo scopo di rendere più facile la creazione, il deployment e l'esecuzione di applicazioni utilizzando i <strong>Container</strong></p>
+				</section>
+
+				<section>
+					<p>I container nascono dall'idea di virtualizzare una "piccola parte" di una macchina</p>
+				</section>
+
+				<section>
+					<p><img src="asset/container_principle.png"></p>
+					<p>I container sono isolati ma possono condividere OS, bin e library</p>
+				</section>
+
+				<section>
+					<p>Docker utilizza le funzionalità di isolamento delle risorse del kernel Linux come i <strong>namespaces</strong> per consentire ai container di coesistere in modo indipendente sulla stessa istanza di Linux</p>
+				</section>
+
+				<section>
+					<p><img src="asset/container_swarm.png"></p>
+					<p>I vantaggi immediati dell'utilizzo dei container sono l'aumento delle prestazioni e la riduzione dell'ingombro dell'applicazione</p>
+				</section>
+
+				<section>
+					<p>Docker ci consente il deploy in qualsiasi ambiente di esecuzione, senza doversi preoccupare delle condizioni di eseguibilità</p>
+				</section>
+
+				<section>
+					<h2 class="title">Runtime in conflitto</h2>
+					<p>Es. eseguire differenti versioni di PHP/Python stessa macchina</p>
+					<p>Es. non dobbiamo installare le dipendenze o librerie in locale</p>
+				</section>
+
+				<section>
+					<h2 class="title">Mapping di porte e servizi</h2>
+					<p>Es. rimappare più processi httpd in ascolto sulla porta 80 su porte diverse</p>
+				</section>
+
+				<section>
+					<h2 class="title">Allineare la configurazione degli ambienti di sviluppo, test e produzione</h2>
+					<ul>
+						<li>Isolamento tra progetti che usano gli stessi servizi (versione, configurazione, dati, etc.)</li>
+						<li>Facilità a mantenere allineate le versioni dei servizi sui vari ambienti</li>
+						<li>Condivisione e versioning degli ambienti di sviluppo</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="asset/it_works_on_my_machine.jpg">
+				</section>
+
+				<section>
+					<h2 class="title">Primi passi con Docker</h2>
+				</section>
+
+				<section>
+					<h2 class="title">docker.com > Get Docker</h2>
+					<p><img src="asset/linux.png" style="vertical-align:middle;"> Linux</p>
+					<p><img src="asset/mac.png" style="vertical-align:middle;"> Mac</p>
+					<p><img src="asset/windows.png" style="vertical-align:middle;"> Windows</p>
+				</section>
+
+				<section>
+					<p>Verifichiamo se Docker è installato</p>
+					<pre><code data-trim data-noescape>
+						$ docker --version
+						Docker version 1.13.1, build 092cba3
+						$ docker-machine --version
+						docker-machine version 0.9.0, build 15fd4c7
+					</code></pre>
+					<p>Verifichiamo se Docker Compose è installato</p>
+					<pre><code data-trim data-noescape>
+						$ docker-compose --version
+						docker-compose version 1.11.1, build 7c5d5e4
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">Container</h2>
+					<p>Un container è un'istanza di una immagine in esecuzione</p>
+				</section>
+
+				<section>
+					<h2 class="title">Immagine</h2>
+					<p>E' un template per creare l'ambiente desiderato</p>
+				</section>
+
+				<section>
+					<h2 class="title">Immagine</h2>
+					<p>Viene definita attraverso un file di testo chiamato <code>Dockerfile</code> che contiene gli step necessari per creare l'immagine</p>
+					<pre><code data-trim data-noescape>
+						# Dockerfile
+						FROM ubuntu:16.04
+						RUN apt-get update && apt-get install -y nodejs npm
+						RUN ln -s /usr/bin/nodejs /usr/bin/node
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">Docker Hub<br/>hub.docker.com</h2>
+					<p>Es. immagini PHP pronte all'uso (sintassi image_name:version)</p>
+					<pre><code data-trim data-noescape>
+						php:7.1.1-apache
+						php:7.1-apache
+						php:7-apache
+						php:7.1.1-fpm
+						php:7.1-fpm
+						php:7-fpm
+						php:5.6.30-apache
+						php:5.6-apache
+						php:5.6.30-fpm
+						php:5.6-fpm
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">docker search</h2>
+					<pre><code data-trim data-noescape>
+						$ docker search php
+						NAME                      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+						php                       While designed for web development, the PH...   2033      [OK]
+						richarvey/nginx-php-fpm   Container running Nginx + PHP-FPM capable ...   343                  [OK]
+						phpmyadmin/phpmyadmin     A web interface for MySQL and MariaDB.          264                  [OK]
+						eboraas/apache-php        PHP5 on Apache (with SSL support), built o...   118                  [OK]
+						...
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">docker pull</h2>
+					<pre><code data-trim data-noescape>
+						$ docker pull hello-world
+						Using default tag: latest
+						latest: Pulling from library/hello-world
+						78445dd45222: Pull complete
+						Digest: sha256:c5515758d4c5e1e838e9cd307f6c6a0d620b5e07e6f927b07d05f6d12a1ac8d7
+						Status: Downloaded newer image for hello-world:latest
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">docker run</h2>
+				</section>
+
+				<section>
+					<h2 class="title">Docker Hello World</h2>
+					<pre><code data-trim data-noescape>
+						$ docker run hello-world
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">PHP 7.1.1 con Apache</h2>
+					<pre><code data-trim data-noescape>
+						$ docker run -p 80:80 -v $(pwd)/www:/var/www/html php:7.1.1-apache
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">docker ps</h2>
+					<pre><code data-trim data-noescape>
+						$ docker ps
+						CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES
+						185bb506324c        php:7.1.1-apache    "docker-php-entryp..."   5 seconds ago       Up 4 seconds        0.0.0.0:80->80/tcp   unruffled_mestorf
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">Container stop</h2>
+					<p>Lo stop del container avviene quando usiamo il comando <code>docker stop</code> oppure quando il processo principale termina</p>
+				</section>
+
+				<section>
+					<h2 class="title">docker images</h2>
+					<pre><code data-trim data-noescape>
+						$ docker images
+						REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+						php                     7.1.1-apache        399dbfe34f35        2 weeks ago         386 MB
+						casper                  latest              e5c8990c2631        2 weeks ago         470 MB
+						ubuntu                  14.04               b969ab9f929b        2 weeks ago         188 MB
+						hello-world             latest              48b5124b2768        2 weeks ago         1.84 kB
+						ubuntu                  16.04               104bec311bcd        2 weeks ago        129 MB
+						redis                   latest              d59dc9e6d0bf        2 weeks ago        183 MB
+						mysql                   5.7                 594dc21de8de        2 weeks ago        400 MB
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">docker exec</h2>
+					<p>Il container deve essere runnning</p>
+					<pre><code data-trim data-noescape>
+						$ docker exec -ti container_name bash
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">Docker & WordPress</h2>
+				</section>
+
+				<section>
+					<h2 class="title">Run WordPress</h2>
+					<pre><code data-trim data-noescape>
+						$ docker run -p 80:80 -v $(pwd)/www:/var/www/html wordpress
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">docker-compose</h2>
+				</section>
+
+				<section>
+					<pre><code data-trim data-noescape>
+						# docker-compose.yml
+						 version: '2'
+						 services:
+						    wordpress:
+						    image: wordpress:latest
+						    links:
+						      - mariadb:mysql
+						     environment:
+						      - WORDPRESS_DB_PASSWORD=password
+						     ports:
+						      - "127.0.0.1:80:80"
+						     volumes:
+						      - ./html:/var/www/html
+						     mariadb:
+						     image: mariadb:latest
+						     environment:
+						      - MYSQL_ROOT_PASSWORD=password
+						      - MYSQL_DATABASE=wordpress
+						     volumes:
+						      - ./database:/var/lib/mysql
+					</code></pre>
+				</section>
+
+				<section>
+					<p>Per avviare i container</p>
+					<pre><code data-trim data-noescape>
+						$ docker-compose up -d
+					</code></pre>
+					<p>Per fermare i container</p>
+					<pre><code data-trim data-noescape>
+						$ docker-compose down
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 class="title">Demo</h2>
+				</section>
+
+				<section>
+					<h2 class="title">Per approfondire...</h2>
+					<p>Docker Docs <a href="https://docs.docker.com/" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></p>
+				</section>
+
+				<section>
+					<h4 class="title">25-26 Marzo<br/>Talent Garden Milano Calabiana</h4>
+					<h3 class="title"><span class="orange">#FacileHack</span><br/>L'hackathon di <img style="vertical-align: middle;" src="asset/logo_facile.png" height="70"></h3>
+					<p><a href="http://hackathon.facile.it/" target="_blank">hackathon.facile.it <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+				</section>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/particles.min.js"></script>
+		<script type="text/javascript" src="js/particles.config.js"></script>
+		<script type="text/javascript" src="lib/js/head.min.js"></script>
+		<script type="text/javascript" src="js/reveal.js"></script>
+		<script type="text/javascript">
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                slideNumber: true,
+                transition: 'slide',
+                keyboard: {
+                    38: 'next',
+                    40: 'prev'
+                },
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+		</script>
+	</body>
+</html>

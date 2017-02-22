@@ -1,0 +1,20 @@
+ # docker-compose.yml
+ version: '2'
+ services:
+   wordpress:
+    image: wordpress:latest
+    links:
+     - mariadb:mysql
+    environment:
+     - WORDPRESS_DB_PASSWORD=password
+    ports:
+     - "127.0.0.1:80:80"
+    volumes:
+     - ./html:/var/www/html
+   mariadb:
+    image: mariadb:latest
+    environment:
+     - MYSQL_ROOT_PASSWORD=password
+     - MYSQL_DATABASE=wordpress
+    volumes:
+     - ./database:/var/lib/mysql
