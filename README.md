@@ -1,5 +1,9 @@
 # Talks & courses
 
+## 2021
+
+* **Facile.it**, Milan, Facile.it Partner Hackathon, [Opening Ceremony](https://www.slideshare.net/parallelit/facileit-partner-hackathon-kickoff-249341159)
+
 ## 2020
 
 * **Facile.it**, Milan, IT Meeting, [Kibana: Real-World Examples](https://www.slideshare.net/parallelit/kibana-realworld-examples)
