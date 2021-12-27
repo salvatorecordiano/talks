@@ -9,6 +9,7 @@
 
 ## 2020
 
+* **Facile.it**, Milan, Internal Meeting, [Exploring team metrics (a first naive tentative)](https://www.slideshare.net/parallelit/exploring-team-metrics-a-first-naive-tentative-239509493)
 * **Facile.it**, Milan, IT Meeting, [Kibana: Real-World Examples](https://www.slideshare.net/parallelit/kibana-realworld-examples)
 
 ## 2017
