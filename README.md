@@ -2,7 +2,10 @@
 
 ## 2021
 
+* **Facile.it**, Milan, IT Meeting, [Introducing kaizen](https://www.slideshare.net/parallelit/introducing-kaizen)
+* **Facile.it**, Milan, IT Meeting, [Introducing Eisenhower Matrix](https://www.slideshare.net/parallelit/introducing-eisenhower-matrix)
 * **Facile.it**, Milan, Facile.it Partner Hackathon, [Opening Ceremony](https://www.slideshare.net/parallelit/facileit-partner-hackathon-kickoff-249341159)
+* **Facile.it**, Milan, IT Meeting, [It's all about culture](https://www.slideshare.net/parallelit/its-all-about-culture)
 
 ## 2020
 
