@@ -1,9 +1,14 @@
 # Talks & courses
 
+## 2022
+
+* **Facile.it**, Milan, Internal Meeting, [Remarks about Ownership](https://www.slideshare.net/parallelit/remarks-about-ownership)
+
 ## 2021
 
-* **Facile.it**, Milan, Internal Meeting, [Introducing kaizen](https://www.slideshare.net/parallelit/introducing-kaizen)
+* **Facile.it**, Milan, Internal Meeting, [Introducing Kaizen](https://www.slideshare.net/parallelit/introducing-kaizen)
 * **Facile.it**, Milan, Internal Meeting, [Introducing Eisenhower Matrix](https://www.slideshare.net/parallelit/introducing-eisenhower-matrix)
+* **Facile.it**, Milan, Internal Meeting, [The Blake Mouton Managerial Grid](https://www.slideshare.net/parallelit/the-blake-mouton-managerial-grid-249491395)
 * **Facile.it**, Milan, Facile.it Partner Hackathon, [Opening Ceremony](https://www.slideshare.net/parallelit/facileit-partner-hackathon-kickoff-249341159)
 * **Facile.it**, Milan, Internal Meeting, [It's all about culture](https://www.slideshare.net/parallelit/its-all-about-culture)
 
