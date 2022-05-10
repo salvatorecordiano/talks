@@ -2,6 +2,7 @@
 
 ## 2022
 
+* **Facile.it**, Milan, Facile.it Partner Hackathon, [Opening Ceremony](https://www.slideshare.net/parallelit/facileit-partner-hackathon-2022)
 * **Facile.it**, Milan, Internal Meeting, [Remarks about Ownership](https://www.slideshare.net/parallelit/remarks-about-ownership)
 
 ## 2021
