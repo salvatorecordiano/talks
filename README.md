@@ -1,5 +1,9 @@
 # Talks & courses
 
+## 2023
+
+* **Facile.it**, Milan, Facile.it Partner Hackathon, [What we learned](https://www.slideshare.net/parallelit/facileit-partner-hackathon-2023-what-we-learned)
+
 ## 2022
 
 * **Facile.it**, Milan, Facile.it Partner FP Talks, [Delivering Effective Feedback](https://www.slideshare.net/parallelit/delivering-effective-feedback-fp-talkspdf)
