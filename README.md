@@ -1,5 +1,9 @@
 # Talks & courses
 
+## 2024
+
+* **Edgemony**, Coding Bootcamp, [Human bugs - Why is thinking hard](https://www.slideshare.net/slideshow/human-bugs-why-is-thinking-hard-tech-talk/270492953)
+
 ## 2023
 
 * **Facile.it**, Milan, Facile.it Partner Hackathon, [What we learned](https://www.slideshare.net/parallelit/facileit-partner-hackathon-2023-what-we-learned)
